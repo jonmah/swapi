@@ -1,3 +1,7 @@
-const People = () => <>People</>;
+const People = () => (
+  <div>
+    <h2>People</h2>
+  </div>
+)
 
-export default People;
+export default People
