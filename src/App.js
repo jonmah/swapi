@@ -1,13 +1,18 @@
-import { NavBar } from "@components";
+import { useState } from "react"
+import { NavBar, People, Planets } from "@components"
 
 function App() {
+  const [page, setPage] = useState("planets")
+
   return (
     <div className="App">
       <h1>Star Wars Info</h1>
-      <NavBar />
-      <div className="content"></div>
+      <NavBar setPage={setPage} />
+      <div className="content">
+        {page === "planets" ? <Planets /> : <People />}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

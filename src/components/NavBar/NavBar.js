@@ -1,8 +1,8 @@
-const NavBar = () => (
+const NavBar = ({ setPage }) => (
   <nav>
-    <button>People</button>
-    <button>Planets</button>
+    <button onClick={() => setPage("people")}>People</button>
+    <button onClick={() => setPage("planets")}>Planets</button>
   </nav>
-);
+)
 
-export default NavBar;
+export default NavBar
