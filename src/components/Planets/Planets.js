@@ -9,6 +9,13 @@ const Planets = () => {
   return (
     <div>
       <h2>Planets</h2>
+      {isFetching ? (
+        <div>Loading</div>
+      ) : isError ? (
+        <div>Error fetching data</div>
+      ) : (
+        <div>Finished</div>
+      )}
     </div>
   )
 }
