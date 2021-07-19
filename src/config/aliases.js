@@ -6,13 +6,13 @@ const aliases = (prefix = `src`) => ({
   //   "@templates": `${prefix}/components/templates`,
   //   "@config": `${prefix}/config`,
   //   "@enums": `${prefix}/enums`,
-  //   "@hooks": `${prefix}/hooks`,
+  "@hooks": `${prefix}/hooks`,
   //   "@icons": `${prefix}/components/atoms/Icons`,
   //   "@styles": `${prefix}/styles`,
   //   "@utils": `${prefix}/utils`,
   //   "@state": `${prefix}/state`,
   //   "@types": `${prefix}/types`,
   //   "@storybookHelpers": `../.storybook/helpers`,
-});
+})
 
-module.exports = aliases;
+module.exports = aliases
