@@ -10,6 +10,7 @@ const fetchPlanets = async () => {
 const usePlanets = () => {
   const { data, isFetching, isError } = useQuery("planets", fetchPlanets, {
     staleTime: 5000,
+    onSuccess: () => console.log("yeah baby"),
   })
 
   return { data, isError, isFetching }
