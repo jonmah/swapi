@@ -8,7 +8,9 @@ const fetchPlanets = async () => {
 }
 
 const usePlanets = () => {
-  const { data, isFetching, isError } = useQuery("planets", fetchPlanets)
+  const { data, isFetching, isError } = useQuery("planets", fetchPlanets, {
+    staleTime: 5000,
+  })
 
   return { data, isError, isFetching }
 }
