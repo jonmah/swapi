@@ -1,7 +1,7 @@
 import { useQuery } from "react-query"
 
 const fetchPlanets = async () => {
-  const data = await fetch("http://swapi.dev/api/planets/").then((res) =>
+  const data = await fetch("http://swapi.dev/api/planets").then((res) =>
     res.json()
   )
   return data

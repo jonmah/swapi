@@ -3,9 +3,6 @@ import { usePlanets } from "@hooks"
 const Planets = () => {
   const { data, isError, isFetching } = usePlanets()
 
-  console.log(data)
-  console.log(isError)
-  console.log(isFetching)
   return (
     <div>
       <h2>Planets</h2>
@@ -14,7 +11,11 @@ const Planets = () => {
       ) : isError ? (
         <div>Error fetching data</div>
       ) : (
-        <div>Finished</div>
+        <div>
+          {data.results.map(({ name, url }) => (
+            <div key={url}>{name}</div>
+          ))}
+        </div>
       )}
     </div>
   )
